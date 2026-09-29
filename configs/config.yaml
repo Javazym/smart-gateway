@@ -1,0 +1,26 @@
+server:
+  addr: ":8098"
+  read_timeout: 30s
+  write_timeout: 30s
+mysql:
+  user: root
+  password: "QLBM2905"
+  host: 127.0.0.1
+  port: 3306
+  database: gateway
+  charset: utf8mb4
+  maxOpenConns: 20
+  maxIdleConns: 5
+  connMaxLifetime: 1h
+redis:
+  addr: 127.0.0.1:6377
+  db: 4
+  poolSize: 10
+  minIdleConns: 5
+jwt:
+  secret: "change-me-please"
+  expire: 24h
+security:
+  # 是否拦截内网/回环上游地址(SSRF 防护)。内网/单机网关场景保持 false。
+  ssrf_protection: false
+
